@@ -1,0 +1,19 @@
+{% extends 'myweb_main/defolt.html'%}
+{% block title %}Главная{% endblock %}
+{% load static %}
+{% load menu_tags %}
+
+{% block content %}
+<div class="features">
+   <h1>Главная страница</h1>
+      <p>Пользовател:</p>
+      <prof>
+         <div id="user">
+            <a class="py-2 d-none d-md-inline-block" href="{% url 'about' %}" style="text-decoration: none">{% profile %}</a>
+         </div>
+      </prof>
+   <main>
+      <img src="{% static 'myweb_main/img/2PHp.gif' %}" alt="">
+   </main>
+</div>
+{% endblock %}

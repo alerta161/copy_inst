@@ -1,0 +1,15 @@
+{% extends 'myweb_main/defolt.html'%}
+{% block title %}Главная{% endblock %}
+{% load static %}
+{% load menu_tags %}
+
+{% block content %}
+<div class="features">
+   <h1>Главная страница</h1>
+      <p>Общая страница</p>
+   <main>
+      <img src="{% static 'myweb_main/img/111.gif' %}" alt="">
+   </main>
+</div>
+
+{% endblock %}

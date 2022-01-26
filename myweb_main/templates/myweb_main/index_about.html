@@ -1,0 +1,24 @@
+{% extends 'myweb_main/defolt.html'%}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+{% block content %}
+{% load menu_tags %}
+    <h1>Ваши публикации</h1>
+    {% if posts %}
+        {% for el in posts %}
+            <div class="alert alert-warning ">
+                <h3> {{ el.title }}</h3>
+                <p> {{ el.text }}</p>
+                {% if el.image %}
+                     <ul><img src="{{ el.image.url }}" ></ul>
+                {% else %}
+                     <p></p>
+                {% endif %}
+            </div>
+        {% endfor %}
+    {% else %}
+         <p> Пока записей нет) </p>
+    {% endif %}
+{% endblock %}

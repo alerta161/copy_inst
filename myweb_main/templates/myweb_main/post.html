@@ -1,0 +1,16 @@
+{% extends 'myweb_main/defolt.html'%}
+
+{% block title %}
+Загрузка поста
+{% endblock %}
+{% block content %}
+    <h1>Загрузка поста</h1>
+<form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.media }}
+        {{ form.as_p }}<br>
+        <br>
+        <button type="submit" class="btn btn-warning">Добавить пост</button>
+        <span>{{ error }}</span>
+</form>
+{% endblock %}
