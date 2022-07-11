@@ -14,28 +14,33 @@
     <link rel="stylesheet" href="{% static 'myweb_main/css/myweb_main.css' %}">
 </head>
 <body>
-    <aside>
-        <img src="{% static 'myweb_main/img/camera.png' %}" alt="">
-        <span class="logo">CopInst</span>
-        <h3>Навигация</h3>
-        <ul>
-            <div id="menu">
-              <li><i class="fas fa-home" >{% menu %}</i></li></a>
-            </div>
-            <div id="about">
-                <a class="py-2 d-none d-md-inline-block" href="{% url 'about' %}" style="text-decoration: none"><li><i class="fas fa-images">{% about %}</i>Ваши публикации</li></a>
-            </div>
-            <div id="post">
-                <a class="py-2 d-none d-md-inline-block" href="{% url 'post' %}" style="text-decoration: none"><li><i class="fas fa-download">{% post %}</i>Загрузка поста</li></a>
-            </div>
-            <div id="user">
-                <li1 style="text-decoration: none"><i class="fas fa-user-secret">{% login_menu %}</i></li1>
-            </div>
+<aside>
+    <img src="{% static 'myweb_main/img/camera.png' %}" alt="">
+    <span class="logo">CopInst</span>
+    <h3>Навигация</h3>
+    <ul>
+        <div id="menu">
+            <li><i class="fas fa-home"></i></li>
+            </a>
+        </div>
+        <div id="about">
+            <a class="py-2 d-none d-md-inline-block" href="{% url 'about' %}" style="text-decoration: none">
+                <li><i class="fas fa-images">{% about %}</i>Ваши публикации</li>
+            </a>
+        </div>
+        <div id="post">
+            <a class="py-2 d-none d-md-inline-block" href="{% url 'post' %}" style="text-decoration: none">
+                <li><i class="fas fa-download">{% post %}</i>Загрузка поста</li>
+            </a>
+        </div>
+        <div id="user">
+            <li1 style="text-decoration: none"><i class="fas fa-user-secret">{% login_menu %}</i></li1>
+        </div>
 
-        </ul>
-    </aside>
-    <div class="container">
-            {% block content %}{% endblock %}
-    </div>
+    </ul>
+</aside>
+<div class="container">
+    {% block content %}{% endblock %}
+</div>
 </body>
 </html>

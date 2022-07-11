@@ -2,12 +2,11 @@ from django.contrib.auth.models import User
 from django.core.validators import RegexValidator
 from django.db import models
 
-
 from media_app.models import Media
 
 
 class Post(models.Model):
-    user = models.ForeignKey(User, related_name='posts', on_delete=models.PROTECT)
+    user = models.ForeignKey(User, related_name='posts', on_delete=models.PROTECT, null=True)
     create_date = models.DateTimeField(auto_now_add=True)
     is_public = models.BooleanField(default=True)
     title = models.CharField("Название", max_length=256, unique=False, blank=False, null=False)
