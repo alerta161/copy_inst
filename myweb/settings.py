@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
 from pathlib import Path
+import dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +26,6 @@ if os.path.isfile(dotenv_file):
     dotenv.load_dotenv(dotenv_file)
 
 SECRET_KEY = os.environ['SECRET_KEY']
-SECRET_KEY = 'django-insecure-=e%ejt+t$q$wj90uct$+7*i*r-!b5nm&dg^0zn-wi*a929uwq8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
